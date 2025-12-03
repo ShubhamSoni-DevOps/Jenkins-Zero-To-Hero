@@ -8,5 +8,10 @@ pipeline {
         sh 'node --version'
       }
     }
+    stage('Removing Unused Images'){
+      steps {
+        sh 'docker volume prune --yes'
+      }
+    }
   }
 }
