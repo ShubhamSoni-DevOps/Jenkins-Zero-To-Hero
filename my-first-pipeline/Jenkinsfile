@@ -8,6 +8,13 @@ pipeline {
         sh 'node --version'
       }
     }
+    stages{
+      stage('Waiting for 5 seconds'){
+        steps{
+          sh 'sleep 5'
+        }
+      }
+    }
     stage('Removing Unused Images'){
       steps {
         sh 'docker image prune -af'
