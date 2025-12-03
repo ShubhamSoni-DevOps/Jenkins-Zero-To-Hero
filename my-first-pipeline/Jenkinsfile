@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Removing the old Image'){
       steps{
-        sh 'docker image rmi node:16-alpine'
+        sh '''docker image rmi node:16-alpine'''
       }
     }
   }
