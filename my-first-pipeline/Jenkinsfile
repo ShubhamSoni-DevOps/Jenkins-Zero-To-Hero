@@ -13,10 +13,5 @@ pipeline {
         sh 'sleep 5'
       }
     }
-    stage('Removing Unused Images'){
-      steps {
-        sh 'docker image prune -af'
-      }
-    }
   }
 }
