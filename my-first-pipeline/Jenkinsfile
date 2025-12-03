@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Removing Unused Images'){
       steps {
-        sh 'docker image prune --yes'
+        sh 'docker image prune -af'
       }
     }
   }
